@@ -43,7 +43,7 @@ I build and ship production-grade software — from AI-powered drug discovery pi
 ## Featured Projects
 
 ### 🧬 MolGenix — AI-Powered Drug Discovery Pipeline
-[Source →](https://github.com/aaradhya177/EKLAVYA_PROTOTYPE)
+[Source →](https://github.com/aaradhya177/ElderMind)
 
 Early-stage drug screening is slow by design — weeks of manual work just to produce a shortlist of candidates. MolGenix compresses that into a single pipeline run. Feed it a plain-English disease description and it outputs ranked drug candidates with binding scores, hepatotoxicity/cardiotoxicity flags (via DeepChem GNNs), and 3D molecular visualisations — all capped with a one-click PDF report. Built and shipped in 36 hours at Augmentix Hackathon, NMIT — **2nd place**.
 
@@ -52,8 +52,7 @@ Early-stage drug screening is slow by design — weeks of manual work just to pr
 ---
 
 ### 🏋️ Eklavya (AthleteOS) — Athlete Data & Intelligence Platform
-[Source →](https://github.com/aaradhya177/ElderMind)
-
+[Source →](https://github.com/aaradhya177/EKLAVYA_PROTOTYPE)
 Indian sport has a data problem. Coaches rely on instinct; injuries go undetected until they become season-ending. Eklavya is a multi-interface platform — a Next.js dashboard for coaches and federation admins, a React Native app for athletes, separate FastAPI microservices — all on a shared PostgreSQL database. A scikit-learn injury risk model with SHAP explanations surfaces exactly which metrics (load, sleep, prior injuries) are driving each prediction.
 
 `FastAPI` `Next.js` `React Native` `PostgreSQL` `Redis` `Celery` `scikit-learn` `SHAP` `Docker` `AWS S3`
