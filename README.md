@@ -53,6 +53,7 @@ Early-stage drug screening is slow by design — weeks of manual work just to pr
 
 ### 🏋️ Eklavya (AthleteOS) — Athlete Data & Intelligence Platform
 [Source →](https://github.com/aaradhya177/EKLAVYA_PROTOTYPE)
+
 Indian sport has a data problem. Coaches rely on instinct; injuries go undetected until they become season-ending. Eklavya is a multi-interface platform — a Next.js dashboard for coaches and federation admins, a React Native app for athletes, separate FastAPI microservices — all on a shared PostgreSQL database. A scikit-learn injury risk model with SHAP explanations surfaces exactly which metrics (load, sleep, prior injuries) are driving each prediction.
 
 `FastAPI` `Next.js` `React Native` `PostgreSQL` `Redis` `Celery` `scikit-learn` `SHAP` `Docker` `AWS S3`
