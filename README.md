@@ -2,7 +2,7 @@
 
 **CS Student @ BIT Bengaluru · Full-Stack & AI/ML Developer · Hackathon Builder**
 
-I build and ship production-grade software — from AI-powered drug discovery pipelines to multi-service athlete intelligence platforms. Currently in my 6th semester (CGPA: 8.5/10), targeting AI/ML and SWE internships where engineering depth matters.
+I build and ship production-grade software — from AI-powered drug discovery pipelines to multi-service athlete intelligence platforms. Currently in my 7th semester (CGPA: 8.5/10), targeting AI/ML and SWE internships where engineering depth matters.
 
 ---
 
