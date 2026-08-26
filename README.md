@@ -1,472 +1,100 @@
-````markdown
-# 👋 Hi, I'm Aaradhya Mehra
+# Aaradhya Mehra
 
-### AI/ML Engineer · Backend Engineer · CS @ BIT Bengaluru
+**CS Student @ BIT Bengaluru · Full-Stack & AI/ML Developer · Hackathon Builder**
 
-I build **production-oriented AI systems** with a focus on **RAG, LLM reliability, semantic caching, machine learning, backend engineering, and AI system design**.
-
-Currently pursuing **B.Tech in Computer Science Engineering at Bangalore Institute of Technology** with an **8.5/10 CGPA**, graduating in 2027.
-
-I like building systems where AI is not just a demo — but something that is **measurable, reliable, explainable, and deployable**.
+I build and ship production-grade software — from AI-powered drug discovery pipelines to multi-service athlete intelligence platforms. Currently in my 7th semester (CGPA: 8.5/10), targeting AI/ML and SWE internships where engineering depth matters.
 
 ---
 
-<div align="center">
+## Tech Stack
 
-### ⚡ AI Engineering • Backend Systems • Machine Learning
-
-</div>
-
-<br>
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,cpp,js,java,react,nextjs,nodejs,fastapi,postgres,mongodb,redis,docker,aws,git,github,linux,tensorflow&perline=9" />
-
-</div>
-
-<br>
-
-<div align="center">
-
-`RAG` · `LLM Systems` · `Machine Learning` · `FastAPI` · `Vector Databases` · `System Design`
-
-</div>
-
----
-
-# 🚀 Featured Projects
-
-## 🧠 Support Knowledge Copilot
-
-### RAG-based support assistant with verified citations
-
-**Python · FastAPI · Streamlit · Docker · RAG · BM25 · Dense Retrieval · LLM-as-Judge**
-
-A RAG-based support assistant that answers questions from internal documentation while verifying whether retrieved sources actually support the generated answer.
-
-### 🔍 What I Built
-
-- Hybrid retrieval using **dense embeddings + BM25**
-- **Reciprocal Rank Fusion (RRF)** to combine retrieval results
-- **LLM-as-Judge** citation verification
-- Confidence scoring for retrieved context
-- No-answer detection for low-confidence queries
-- Hand-built **50–75 question golden evaluation set**
-- FastAPI backend with Streamlit interface
-- Dockerized deployment
-
-### 📈 Results
-
-| Metric | Result |
-|---|---:|
-| Baseline Accuracy | 72% |
-| Improved Accuracy | **88%** |
-| Evaluation Dataset | 50–75 questions |
-| Citation Verification | LLM-as-Judge |
-| Backend | FastAPI |
-| UI | Streamlit |
-| Deployment | Docker |
-
-### 🏗️ Architecture
-
-```text
-                         USER QUERY
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │ Query Processing  │
-                    └─────────┬────────┘
-                              │
-                 ┌────────────┴────────────┐
-                 ▼                         ▼
-          Dense Retrieval               BM25
-                 │                         │
-                 └────────────┬────────────┘
-                              ▼
-                  Reciprocal Rank Fusion
-                              │
-                              ▼
-                     Retrieved Context
-                              │
-                              ▼
-                       LLM Generation
-                              │
-                 ┌────────────┴────────────┐
-                 ▼                         ▼
-          Confidence Score            LLM-as-Judge
-                 │                         │
-                 └────────────┬────────────┘
-                              ▼
-                    Verified Final Answer
-                              │
-                              ▼
-                       Citations + Answer
-````
-
-### 💡 Engineering Focus
-
-The main challenge wasn't simply generating an answer.
-
-It was making the answer **trustworthy**.
-
-The system therefore treats:
-
-```text
-Retrieval
-    ↓
-Ranking
-    ↓
-Generation
-    ↓
-Citation Verification
-    ↓
-Confidence
-    ↓
-Evaluation
-```
-
-as one complete pipeline.
+<table>
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40"/><br/>Java</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/><br/>Python</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40" height="40"/><br/>C++</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40"/><br/>JavaScript</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"/><br/>React</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" height="40"/><br/>Next.js</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40"/><br/>Node.js</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" height="40"/><br/>FastAPI</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40"/><br/>HTML5</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40"/><br/>CSS3</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40"/><br/>Tailwind</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" height="40"/><br/>PostgreSQL</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40"/><br/>MongoDB</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="40" height="40"/><br/>Firebase</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" width="40" height="40"/><br/>Redis</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40"/><br/>Docker</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40"/><br/>Git</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40"/><br/>GitHub</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40"/><br/>Linux</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="40" height="40"/><br/>AWS</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="40" height="40"/><br/>Vercel</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="40" height="40"/><br/>TensorFlow</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" width="40" height="40"/><br/>scikit-learn</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="40" height="40"/><br/>Pandas</td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="40" height="40"/><br/>NumPy</td>
+  </tr>
+</table>
 
 ---
 
-# ⚡ Semantic Cache Gateway for LLM APIs
+## Featured Projects
 
-### Semantic caching layer for reducing LLM latency and API cost
+### 🧬 MolGenix — AI-Powered Drug Discovery Pipeline
+[Source →](https://github.com/aaradhya177/ElderMind)
 
-**Python · FastAPI · Qdrant · ChromaDB · Redis · Docker · Locust**
+Early-stage drug screening is slow by design — weeks of manual work just to produce a shortlist of candidates. MolGenix compresses that into a single pipeline run. Feed it a plain-English disease description and it outputs ranked drug candidates with binding scores, hepatotoxicity/cardiotoxicity flags (via DeepChem GNNs), and 3D molecular visualisations — all capped with a one-click PDF report. Built and shipped in 36 hours at Augmentix Hackathon, NMIT — **2nd place**.
 
-A caching proxy that detects **semantically similar LLM requests** and reuses previously generated responses instead of repeatedly calling the underlying LLM API.
-
-### 🧠 The Problem
-
-Traditional caching relies on exact string matching.
-
-```text
-"What is the refund policy?"
-
-"Can you explain your refund rules?"
-```
-
-These are different strings but can represent the same intent.
-
-The gateway uses embeddings to identify semantic similarity and determine whether an existing response can safely be reused.
-
-### 🔧 What I Built
-
-* Embedding-based semantic cache
-* Vector similarity search
-* Similarity threshold tuning
-* LLM-as-Judge cache validation
-* Cache correctness checks
-* Policy tags for cache isolation
-* TTL-based cache policies
-* Redis-backed caching
-* Vector database backend
-* Locust load testing
-* Dockerized FastAPI service
-
-### 📈 Results
-
-| Metric                       |       Result |
-| ---------------------------- | -----------: |
-| Simulated API Cost Reduction |      **40%** |
-| P95 Latency Reduction        |      **65%** |
-| Requests Validated           |    **2,000** |
-| Cache Type                   |     Semantic |
-| Validation                   | LLM-as-Judge |
-| Load Testing                 |       Locust |
-
-### 🏗️ Architecture
-
-```text
-                       CLIENT REQUEST
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │   FastAPI Proxy  │
-                    └─────────┬────────┘
-                              │
-                              ▼
-                     Generate Embedding
-                              │
-                              ▼
-                     Vector Store Search
-                              │
-                    ┌─────────┴─────────┐
-                    │                   │
-                    ▼                   ▼
-                CACHE HIT          CACHE MISS
-                    │                   │
-                    ▼                   ▼
-             Validate Cache          LLM API
-                    │                   │
-                    │                   ▼
-                    │             Store Response
-                    │                   │
-                    └─────────┬─────────┘
-                              ▼
-                       RETURN RESPONSE
-```
+`React` `FastAPI` `DeepChem` `RDKit` `AutoDock Vina` `Gemini API` `PostgreSQL` `Docker`
 
 ---
 
-# 🛠️ Tech Stack
+### 🏋️ Eklavya (AthleteOS) — Athlete Data & Intelligence Platform
+[Source →](https://github.com/aaradhya177/EKLAVYA_PROTOTYPE)
 
-## 🤖 AI / Generative AI
+Indian sport has a data problem. Coaches rely on instinct; injuries go undetected until they become season-ending. Eklavya is a multi-interface platform — a Next.js dashboard for coaches and federation admins, a React Native app for athletes, separate FastAPI microservices — all on a shared PostgreSQL database. A scikit-learn injury risk model with SHAP explanations surfaces exactly which metrics (load, sleep, prior injuries) are driving each prediction.
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,tensorflow&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/RAG-8A2BE2?style=for-the-badge" />
-<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge" />
-<img src="https://img.shields.io/badge/LangGraph-000000?style=for-the-badge" />
-<img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
-<img src="https://img.shields.io/badge/LLM--as--Judge-6C47FF?style=for-the-badge" />
-
-<br>
-
-<img src="https://img.shields.io/badge/Qdrant-D63AFF?style=for-the-badge" />
-<img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Prompt_Engineering-412991?style=for-the-badge" />
-
-</div>
+`FastAPI` `Next.js` `React Native` `PostgreSQL` `Redis` `Celery` `scikit-learn` `SHAP` `Docker` `AWS S3`
 
 ---
 
-## 🧪 Machine Learning & Data
+### 🛒 HoldIt — Product Reservation & In-Store Pickup Platform
+[Source →](https://github.com/aaradhya177/HoldIt)
 
-<div align="center">
+Bridges the gap between browsing online and buying in-store. Customers reserve products and pick them up at their convenience — reducing dead stock for retailers and wait times for shoppers. Built modularly with a strict sequential verification pipeline to keep the codebase production-grade from day one.
 
-<img src="https://skillicons.dev/icons?i=python&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
-<img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge" />
-<img src="https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge" />
-<img src="https://img.shields.io/badge/SHAP-000000?style=for-the-badge" />
-
-</div>
+`Node.js` `TypeScript` `Prisma` `FastAPI` `Next.js` `PostgreSQL` `PostGIS`
 
 ---
 
-## ⚙️ Backend & APIs
+## Achievements
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,fastapi,nodejs,express&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/REST_APIs-02569B?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Microservices-FF6F00?style=for-the-badge" />
-<img src="https://img.shields.io/badge/System_Design-5C2D91?style=for-the-badge" />
-
-</div>
+- 🥈 **2nd Place — Augmentix Hackathon, NMIT Bangalore** — Built MolGenix with a 3-person team in 36 hours; owned the FastAPI backend, DeepChem integration, and docking pipeline end to end
+- 🏆 **Smart India Hackathon — Internal Qualifier** — Shortlisted at BIT for a federated learning solution; led architecture design and presented to faculty judges
+- 💻 **Competitive Programming** — Active on Codeforces and LeetCode; strong in graphs, DP, trees
+- 👥 **Under 25 Community** — Managed a team of 8; restructured content strategy, contributing to a 35% engagement increase in one quarter
 
 ---
 
-## 🌐 Frontend
+## What I'm Working On
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,html,css,tailwind&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
-
-</div>
+- Shipping the **InjuryGuard ML pipeline** as the first production module of Eklavya
+- Building **HoldIt** end-to-end with a clean, backend-first approach
+- Deepening expertise in LLMs, RAG pipelines, and AI system design
 
 ---
 
-## 🗄️ Databases & Caching
+## Open To
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=postgres,mongodb,redis&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/Qdrant-D63AFF?style=for-the-badge" />
-<img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=for-the-badge" />
-
-</div>
+AI/ML internships · SWE internships · Hackathon collaborations · Technical conversations on system design and AI engineering
 
 ---
 
-## ☁️ Cloud & DevOps
+## Connect
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=docker,aws,github,git,linux&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS_S3-569A31?style=for-the-badge&logo=amazonaws&logoColor=white" />
-<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-<img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
-
-</div>
-
----
-
-# 💻 Programming Languages
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,cpp,js,java&perline=10" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge" />
-
-</div>
-
----
-
-# 🔬 What I'm Exploring
-
-```text
-                         AI SYSTEMS
-                              │
-        ┌─────────────────────┼─────────────────────┐
-        │                     │                     │
-       RAG              LLM RELIABILITY        ML SYSTEMS
-        │                     │                     │
-   Hybrid Search        Hallucination          Prediction
-   Reranking            Detection              Evaluation
-   Embeddings           Guardrails             Explainability
-   Evaluation           Citations              Risk Scoring
-        │                     │                     │
-        └─────────────────────┼─────────────────────┘
-                              │
-                       PRODUCTION AI
-                              │
-             ┌────────────────┼────────────────┐
-             │                │                │
-            APIs           Caching         Deployment
-             │                │                │
-          FastAPI           Redis            Docker
-             │                │                │
-             └────────────────┼────────────────┘
-                              │
-                       SYSTEM DESIGN
-```
-
----
-
-# 🏆 Achievements
-
-### 🥈 2nd Place — Augmentix Hackathon, NMIT Bangalore
-
-Built **MolGenix** in 36 hours with a 3-member team, owning the FastAPI backend and ML-based molecular docking pipeline.
-
-### 🏆 Smart India Hackathon — Internal Qualifier
-
-Qualified the institute-level selection by designing a **federated learning solution**, leading system architecture and the technical presentation.
-
-### 💻 Competitive Programming
-
-Solved **250+ algorithmic problems** across LeetCode and Codeforces and achieved **Pupil rating** through rated contests.
-
----
-
-# 🎓 Education
-
-### Bangalore Institute of Technology
-
-**B.Tech in Computer Science Engineering**
-
-📍 Bengaluru, India
-
-**CGPA: 8.5/10**
-
-`September 2023 – June 2027`
-
----
-
-# 📚 Certifications
-
-### Full Stack Generative & Agentic AI with Python — Udemy
-
-* RAG pipelines with LangChain
-* Vector databases
-* Stateful multi-node agents using LangGraph
-
-### Machine Learning A–Z — Udemy
-
-* Regression
-* Classification
-* Clustering
-* NLP pipelines using Scikit-learn
-
-### C++ DSA — Abdul Bari, Udemy
-
-* Graph algorithms
-* Dynamic programming
-* Trees
-* Time and space complexity analysis
-
----
-
-# 📊 GitHub Stats
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=aaradhya177&show_icons=true&hide_border=true&count_private=true&rank_icon=github" />
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aaradhya177&layout=compact&hide_border=true" />
-
-</div>
-
----
-
-# 🔥 Contribution Streak
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=aaradhya177&hide_border=true" />
-
-</div>
-
----
-
-# 📫 Let's Connect
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/aaradhya-mehra-07a46537b/">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-
-<a href="https://github.com/aaradhya177">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-
-<a href="mailto:aaradhyamehra240@gmail.com">
-<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-
-<a href="https://codeforces.com/profile/YoullNeverCodeAlone17">
-<img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white"/>
-</a>
-
-</div>
-
----
-
-<div align="center">
-
-### 🚀 Building AI systems that are useful, measurable, and reliable.
-
-</div>
-```
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aaradhya-mehra-07a46537b/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/aaradhya177)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aaradhyamehra240@gmail.com)
+[![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/YoullNeverCodeAlone17)
