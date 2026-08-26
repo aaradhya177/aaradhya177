@@ -40,34 +40,36 @@ I build and ship production-grade software — from AI-powered drug discovery pi
 
 ---
 
-## Featured Projects
+## 🚀 Featured Projects
 
-### 🧬 MolGenix — AI-Powered Drug Discovery Pipeline
-[Source →](https://github.com/aaradhya177/ElderMind)
+### 🤖 Support Knowledge Copilot — Verified RAG Support Assistant
+[Source →](https://github.com/aaradhya177/Build-citation-verified-RAG-copilot)
 
-Early-stage drug screening is slow by design — weeks of manual work just to produce a shortlist of candidates. MolGenix compresses that into a single pipeline run. Feed it a plain-English disease description and it outputs ranked drug candidates with binding scores, hepatotoxicity/cardiotoxicity flags (via DeepChem GNNs), and 3D molecular visualisations — all capped with a one-click PDF report. Built and shipped in 36 hours at Augmentix Hackathon, NMIT — **2nd place**.
+A RAG-based support assistant that answers questions from internal documentation with **verified, hallucination-checked citations**.
 
-`React` `FastAPI` `DeepChem` `RDKit` `AutoDock Vina` `Gemini API` `PostgreSQL` `Docker`
+- Built a **hybrid retrieval pipeline** combining dense embeddings and BM25 using Reciprocal Rank Fusion, improving accuracy from **72% → 88%**.
+- Added **LLM-as-Judge** verification to ensure citations actually support generated claims.
+- Implemented **confidence scoring and no-answer detection** to prevent unreliable responses.
+- Evaluated retrieval and answer quality using a **50–75 question golden evaluation set**.
+- Deployed with **FastAPI + Streamlit + Docker**.
 
----
-
-### 🏋️ Eklavya (AthleteOS) — Athlete Data & Intelligence Platform
-[Source →](https://github.com/aaradhya177/EKLAVYA_PROTOTYPE)
-
-Indian sport has a data problem. Coaches rely on instinct; injuries go undetected until they become season-ending. Eklavya is a multi-interface platform — a Next.js dashboard for coaches and federation admins, a React Native app for athletes, separate FastAPI microservices — all on a shared PostgreSQL database. A scikit-learn injury risk model with SHAP explanations surfaces exactly which metrics (load, sleep, prior injuries) are driving each prediction.
-
-`FastAPI` `Next.js` `React Native` `PostgreSQL` `Redis` `Celery` `scikit-learn` `SHAP` `Docker` `AWS S3`
+`Python` `FastAPI` `RAG` `BM25` `Embeddings` `LLM-as-Judge` `Streamlit` `Docker`
 
 ---
 
-### 🛒 HoldIt — Product Reservation & In-Store Pickup Platform
-[Source →](https://github.com/aaradhya177/HoldIt)
+### ⚡ Semantic Cache Gateway — LLM Cost & Latency Optimizer
+[Source →](https://github.com/aaradhya177/Build-semantic-cache-gateway)
 
-Bridges the gap between browsing online and buying in-store. Customers reserve products and pick them up at their convenience — reducing dead stock for retailers and wait times for shoppers. Built modularly with a strict sequential verification pipeline to keep the codebase production-grade from day one.
+An embedding-based caching proxy that detects **semantically similar LLM requests** and reuses existing responses to reduce unnecessary API calls.
 
-`Node.js` `TypeScript` `Prisma` `FastAPI` `Next.js` `PostgreSQL` `PostGIS`
+- Built an **embedding-based semantic caching layer** using vector similarity search.
+- Reduced simulated LLM API cost by **40%** and P95 latency by **65%**.
+- Validated cache correctness across **2,000 requests**.
+- Added **similarity threshold tuning and LLM-as-Judge validation** to prevent incorrect cache hits.
+- Designed **policy tags and TTL rules** to prevent cross-user leakage and stale responses.
+- Load-tested the FastAPI proxy using **Locust**, with Redis and a vector-store backend.
 
----
+`Python` `FastAPI` `Qdrant` `ChromaDB` `Redis` `Embeddings` `LLM-as-Judge` `Locust` `Docker`
 
 ## Achievements
 
