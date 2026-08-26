@@ -1,365 +1,472 @@
-# Hi, I'm Aaradhya Mehra 👋
+````markdown
+# 👋 Hi, I'm Aaradhya Mehra
 
-### AI/ML Engineer · Backend Engineer · Computer Science @ BIT Bengaluru
+### AI/ML Engineer · Backend Engineer · CS @ BIT Bengaluru
 
-I build **production-oriented AI systems** that go beyond simply calling an LLM.
+I build **production-oriented AI systems** with a focus on **RAG, LLM reliability, semantic caching, machine learning, backend engineering, and AI system design**.
 
-My focus is on **RAG systems, LLM reliability, semantic caching, ML pipelines, backend engineering, and AI system design** — with an emphasis on measurable performance, evaluation, and safe deployment.
+Currently pursuing **B.Tech in Computer Science Engineering at Bangalore Institute of Technology** with an **8.5/10 CGPA**, graduating in 2027.
 
-Currently pursuing a **B.Tech in Computer Science Engineering at Bangalore Institute of Technology** with an **8.5/10 CGPA**, graduating in June 2027.
+I like building systems where AI is not just a demo — but something that is **measurable, reliable, explainable, and deployable**.
 
 ---
 
-## 🧠 What I Build
+<div align="center">
 
-My engineering interests sit at the intersection of **AI/ML and backend systems**.
+### ⚡ AI Engineering • Backend Systems • Machine Learning
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=python,cpp,js,java,react,nextjs,nodejs,fastapi,postgres,mongodb,redis,docker,aws,git,github,linux,tensorflow&perline=9" />
+
+</div>
+
+<br>
+
+<div align="center">
+
+`RAG` · `LLM Systems` · `Machine Learning` · `FastAPI` · `Vector Databases` · `System Design`
+
+</div>
+
+---
+
+# 🚀 Featured Projects
+
+## 🧠 Support Knowledge Copilot
+
+### RAG-based support assistant with verified citations
+
+**Python · FastAPI · Streamlit · Docker · RAG · BM25 · Dense Retrieval · LLM-as-Judge**
+
+A RAG-based support assistant that answers questions from internal documentation while verifying whether retrieved sources actually support the generated answer.
+
+### 🔍 What I Built
+
+- Hybrid retrieval using **dense embeddings + BM25**
+- **Reciprocal Rank Fusion (RRF)** to combine retrieval results
+- **LLM-as-Judge** citation verification
+- Confidence scoring for retrieved context
+- No-answer detection for low-confidence queries
+- Hand-built **50–75 question golden evaluation set**
+- FastAPI backend with Streamlit interface
+- Dockerized deployment
+
+### 📈 Results
+
+| Metric | Result |
+|---|---:|
+| Baseline Accuracy | 72% |
+| Improved Accuracy | **88%** |
+| Evaluation Dataset | 50–75 questions |
+| Citation Verification | LLM-as-Judge |
+| Backend | FastAPI |
+| UI | Streamlit |
+| Deployment | Docker |
+
+### 🏗️ Architecture
 
 ```text
-                 AI Engineering
-                      │
-        ┌─────────────┼─────────────┐
-        │             │             │
-       RAG        LLM Systems    ML Systems
-        │             │             │
-  Retrieval      Caching        Prediction
-  Evaluation     Reliability    Explainability
-  Citations      Latency        Risk Scoring
-        │             │             │
-        └─────────────┼─────────────┘
-                      │
-                 Backend APIs
-                      │
-              FastAPI · Docker
+                         USER QUERY
+                              │
+                              ▼
+                    ┌──────────────────┐
+                    │ Query Processing  │
+                    └─────────┬────────┘
+                              │
+                 ┌────────────┴────────────┐
+                 ▼                         ▼
+          Dense Retrieval               BM25
+                 │                         │
+                 └────────────┬────────────┘
+                              ▼
+                  Reciprocal Rank Fusion
+                              │
+                              ▼
+                     Retrieved Context
+                              │
+                              ▼
+                       LLM Generation
+                              │
+                 ┌────────────┴────────────┐
+                 ▼                         ▼
+          Confidence Score            LLM-as-Judge
+                 │                         │
+                 └────────────┬────────────┘
+                              ▼
+                    Verified Final Answer
+                              │
+                              ▼
+                       Citations + Answer
+````
 
-I enjoy working on the engineering problems around AI systems — not just model inference, but retrieval quality, evaluation, caching, latency, failure handling, and deployment.
+### 💡 Engineering Focus
 
-🚀 Featured Projects
-01. Support Knowledge Copilot
-RAG-based support assistant with verified citations
+The main challenge wasn't simply generating an answer.
 
-Python · FastAPI · Streamlit · Docker · RAG · BM25 · Dense Retrieval · LLM-as-Judge
+It was making the answer **trustworthy**.
 
-A RAG-based support assistant that answers questions from internal documentation while verifying whether the retrieved sources actually support the generated answer.
+The system therefore treats:
 
-Why I built it
-
-Traditional RAG systems can retrieve relevant documents but still produce answers that are:
-
-poorly supported by retrieved context
-overly confident when retrieval quality is low
-difficult to evaluate systematically
-
-Instead of treating retrieval + generation as a black box, I designed the system around retrieval quality, citation verification, confidence scoring, and evaluation.
-
-Architecture
-                    User Query
-                        │
-                        ▼
-               ┌─────────────────┐
-               │ Query Processing│
-               └────────┬────────┘
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-       Dense Retrieval         BM25
-              │                   │
-              └─────────┬─────────┘
-                        ▼
-              Reciprocal Rank Fusion
-                        │
-                        ▼
-                 Retrieved Context
-                        │
-                        ▼
-                  LLM Generation
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-        Confidence Score     LLM-as-Judge
-              │                   │
-              └─────────┬─────────┘
-                        ▼
-             Verified Final Answer
-                        │
-                        ▼
-             Citation + Response
-Key Engineering Work
-
-Hybrid Retrieval
-
-Combined dense semantic retrieval with BM25 lexical retrieval, then fused the rankings using Reciprocal Rank Fusion (RRF).
-
-Result:
-
-72% → 88% accuracy
-
+```text
+Retrieval
+    ↓
+Ranking
+    ↓
+Generation
+    ↓
 Citation Verification
-
-Implemented an LLM-as-Judge verification layer that checks whether retrieved citations actually support the claims made in the final response.
-
-Confidence & No-Answer Detection
-
-Designed confidence scoring and no-answer detection so the system can avoid confidently answering questions when retrieval evidence is insufficient.
-
+    ↓
+Confidence
+    ↓
 Evaluation
+```
 
-Created a hand-built 50–75 question golden evaluation set to measure retrieval and answer quality.
+as one complete pipeline.
 
-Deployment
+---
 
-Built the application using:
+# ⚡ Semantic Cache Gateway for LLM APIs
 
-FastAPI backend
-Streamlit frontend
-Docker containerization
-Results
-Metric	Result
-Baseline accuracy	72%
-Hybrid retrieval accuracy	88%
-Evaluation dataset	50–75 questions
-Citation verification	LLM-as-Judge
-Backend	FastAPI
-UI	Streamlit
-Deployment	Docker
-02. Semantic Cache Gateway for LLM APIs
-Semantic caching layer for reducing LLM latency and API cost
+### Semantic caching layer for reducing LLM latency and API cost
 
-Python · FastAPI · Qdrant · ChromaDB · Redis · Docker · Locust · Embeddings
+**Python · FastAPI · Qdrant · ChromaDB · Redis · Docker · Locust**
 
-A caching proxy that identifies semantically similar LLM requests and serves previously generated responses instead of repeatedly calling the underlying LLM API.
+A caching proxy that detects **semantically similar LLM requests** and reuses previously generated responses instead of repeatedly calling the underlying LLM API.
 
-Why I built it
+### 🧠 The Problem
 
-Traditional caching depends heavily on exact string matching.
+Traditional caching relies on exact string matching.
 
-For example:
-
+```text
 "What is the refund policy?"
 
 "Can you explain your refund rules?"
+```
+
+These are different strings but can represent the same intent.
+
+The gateway uses embeddings to identify semantic similarity and determine whether an existing response can safely be reused.
+
+### 🔧 What I Built
+
+* Embedding-based semantic cache
+* Vector similarity search
+* Similarity threshold tuning
+* LLM-as-Judge cache validation
+* Cache correctness checks
+* Policy tags for cache isolation
+* TTL-based cache policies
+* Redis-backed caching
+* Vector database backend
+* Locust load testing
+* Dockerized FastAPI service
 
-An exact-match cache treats these as different requests.
+### 📈 Results
 
-A semantic cache can recognize that the two requests may have the same intent and reuse a previous response when the similarity and policy conditions are satisfied.
+| Metric                       |       Result |
+| ---------------------------- | -----------: |
+| Simulated API Cost Reduction |      **40%** |
+| P95 Latency Reduction        |      **65%** |
+| Requests Validated           |    **2,000** |
+| Cache Type                   |     Semantic |
+| Validation                   | LLM-as-Judge |
+| Load Testing                 |       Locust |
 
-Architecture
-                  Client Request
-                        │
-                        ▼
-                 ┌──────────────┐
-                 │ FastAPI Proxy│
-                 └──────┬───────┘
-                        │
-                        ▼
-                  Generate Embedding
-                        │
-                        ▼
-                Vector Store Search
-                        │
-                 ┌──────┴──────┐
-                 │             │
-              Cache Hit     Cache Miss
-                 │             │
-                 ▼             ▼
-          Validate Hit      LLM API
-                 │             │
-                 │             ▼
-                 │       Store Response
-                 │             │
-                 └──────┬──────┘
-                        ▼
-                  Return Response
-Key Engineering Work
+### 🏗️ Architecture
 
-Embedding-Based Semantic Matching
+```text
+                       CLIENT REQUEST
+                              │
+                              ▼
+                    ┌──────────────────┐
+                    │   FastAPI Proxy  │
+                    └─────────┬────────┘
+                              │
+                              ▼
+                     Generate Embedding
+                              │
+                              ▼
+                     Vector Store Search
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+                    ▼                   ▼
+                CACHE HIT          CACHE MISS
+                    │                   │
+                    ▼                   ▼
+             Validate Cache          LLM API
+                    │                   │
+                    │                   ▼
+                    │             Store Response
+                    │                   │
+                    └─────────┬─────────┘
+                              ▼
+                       RETURN RESPONSE
+```
 
-Converted incoming requests into embeddings and searched a vector store for semantically similar previous requests.
+---
 
-Cache Correctness
+# 🛠️ Tech Stack
 
-A cache hit does not automatically mean a correct cache hit.
+## 🤖 AI / Generative AI
 
-I added:
+<div align="center">
 
-similarity threshold tuning
-LLM-as-Judge validation
-cache correctness checks
+<img src="https://skillicons.dev/icons?i=python,tensorflow&perline=10" />
 
-to reduce incorrect reuse of cached responses.
+<br><br>
 
-Performance Optimization
+<img src="https://img.shields.io/badge/RAG-8A2BE2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge" />
+<img src="https://img.shields.io/badge/LangGraph-000000?style=for-the-badge" />
+<img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
+<img src="https://img.shields.io/badge/LLM--as--Judge-6C47FF?style=for-the-badge" />
 
-The system achieved:
+<br>
 
-40% reduction in simulated LLM API cost
-65% reduction in P95 latency
-Validation across 2,000 requests
+<img src="https://img.shields.io/badge/Qdrant-D63AFF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Prompt_Engineering-412991?style=for-the-badge" />
 
-Policy Isolation
+</div>
 
-Designed policy tags and TTL rules to prevent cached responses from leaking across users or sensitive query boundaries.
+---
 
-Load Testing
+## 🧪 Machine Learning & Data
 
-Load-tested the FastAPI proxy using Locust, with Redis and a vector-store backend.
+<div align="center">
 
-Results
-Metric	Result
-Simulated API cost reduction	40%
-P95 latency reduction	65%
-Requests validated	2,000
-Cache matching	Semantic / embedding-based
-Correctness validation	LLM-as-Judge
-Load testing	Locust
-🛠️ Technical Stack
-AI / GenAI
+<img src="https://skillicons.dev/icons?i=python&perline=10" />
 
+<br><br>
 
+<img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+<img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge" />
+<img src="https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge" />
+<img src="https://img.shields.io/badge/SHAP-000000?style=for-the-badge" />
 
+</div>
 
+---
 
+## ⚙️ Backend & APIs
 
+<div align="center">
 
+<img src="https://skillicons.dev/icons?i=python,fastapi,nodejs,express&perline=10" />
 
+<br><br>
 
+<img src="https://img.shields.io/badge/REST_APIs-02569B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Microservices-FF6F00?style=for-the-badge" />
+<img src="https://img.shields.io/badge/System_Design-5C2D91?style=for-the-badge" />
 
+</div>
 
+---
 
+## 🌐 Frontend
 
+<div align="center">
 
-RAG · LangChain · LangGraph · Hugging Face · Vector Databases · Prompt Engineering · LLM-as-Judge
+<img src="https://skillicons.dev/icons?i=react,nextjs,html,css,tailwind&perline=10" />
 
-Machine Learning & Data
+<br><br>
 
+<img src="https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
 
+</div>
 
+---
 
+## 🗄️ Databases & Caching
 
+<div align="center">
 
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,redis&perline=10" />
 
+<br><br>
 
-Scikit-learn · Pandas · NumPy · Matplotlib
+<img src="https://img.shields.io/badge/Qdrant-D63AFF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=for-the-badge" />
 
-Backend
+</div>
 
+---
 
+## ☁️ Cloud & DevOps
 
+<div align="center">
 
+<img src="https://skillicons.dev/icons?i=docker,aws,github,git,linux&perline=10" />
 
+<br><br>
 
-FastAPI · Node.js · REST APIs · Backend System Design
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS_S3-569A31?style=for-the-badge&logo=amazonaws&logoColor=white" />
+<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+<img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
 
-Databases
+</div>
 
+---
 
+# 💻 Programming Languages
 
+<div align="center">
 
+<img src="https://skillicons.dev/icons?i=python,cpp,js,java&perline=10" />
 
+<br><br>
 
-PostgreSQL · MongoDB · Redis · Qdrant · ChromaDB
+<img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge" />
 
-Cloud & DevOps
+</div>
 
+---
 
+# 🔬 What I'm Exploring
 
+```text
+                         AI SYSTEMS
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+       RAG              LLM RELIABILITY        ML SYSTEMS
+        │                     │                     │
+   Hybrid Search        Hallucination          Prediction
+   Reranking            Detection              Evaluation
+   Embeddings           Guardrails             Explainability
+   Evaluation           Citations              Risk Scoring
+        │                     │                     │
+        └─────────────────────┼─────────────────────┘
+                              │
+                       PRODUCTION AI
+                              │
+             ┌────────────────┼────────────────┐
+             │                │                │
+            APIs           Caching         Deployment
+             │                │                │
+          FastAPI           Redis            Docker
+             │                │                │
+             └────────────────┼────────────────┘
+                              │
+                       SYSTEM DESIGN
+```
 
+---
 
+# 🏆 Achievements
 
+### 🥈 2nd Place — Augmentix Hackathon, NMIT Bangalore
 
+Built **MolGenix** in 36 hours with a 3-member team, owning the FastAPI backend and ML-based molecular docking pipeline.
 
-Docker · AWS S3 · GitHub Actions · Render · Vercel · Linux
+### 🏆 Smart India Hackathon — Internal Qualifier
 
-Languages
+Qualified the institute-level selection by designing a **federated learning solution**, leading system architecture and the technical presentation.
 
+### 💻 Competitive Programming
 
+Solved **250+ algorithmic problems** across LeetCode and Codeforces and achieved **Pupil rating** through rated contests.
 
+---
 
+# 🎓 Education
 
+### Bangalore Institute of Technology
 
+**B.Tech in Computer Science Engineering**
 
+📍 Bengaluru, India
 
-Python · C++ · JavaScript · SQL
+**CGPA: 8.5/10**
 
-📊 Engineering Focus
+`September 2023 – June 2027`
 
-I'm currently going deeper into the areas where AI meets real-world software engineering:
+---
 
-LLM Applications
-      │
-      ├── RAG
-      │    ├── Hybrid Retrieval
-      │    ├── Reranking
-      │    └── Evaluation
-      │
-      ├── Reliability
-      │    ├── Hallucination Detection
-      │    ├── Citation Verification
-      │    ├── Confidence Scoring
-      │    └── Guardrails
-      │
-      ├── Performance
-      │    ├── Semantic Caching
-      │    ├── Latency Optimization
-      │    └── Load Testing
-      │
-      └── Production AI
-           ├── APIs
-           ├── Docker
-           ├── Monitoring
-           └── System Design
-🏆 Achievements
-🥈 2nd Place — Augmentix Hackathon, NMIT Bangalore
+# 📚 Certifications
 
-Built MolGenix in 36 hours with a 3-member team, owning the FastAPI backend and ML-based molecular docking pipeline.
+### Full Stack Generative & Agentic AI with Python — Udemy
 
-🏆 Smart India Hackathon — Internal Qualifier
+* RAG pipelines with LangChain
+* Vector databases
+* Stateful multi-node agents using LangGraph
 
-Qualified the institute-level selection by designing a federated learning solution, leading system architecture and the technical presentation.
+### Machine Learning A–Z — Udemy
 
-💻 Competitive Programming
+* Regression
+* Classification
+* Clustering
+* NLP pipelines using Scikit-learn
 
-Solved 250+ algorithmic problems across LeetCode and Codeforces and achieved Pupil rating through rated contests.
+### C++ DSA — Abdul Bari, Udemy
 
-🎓 Education
-Bangalore Institute of Technology — Bengaluru, India
+* Graph algorithms
+* Dynamic programming
+* Trees
+* Time and space complexity analysis
 
-B.Tech in Computer Science Engineering
+---
 
-CGPA: 8.5/10
+# 📊 GitHub Stats
 
-September 2023 – June 2027
+<div align="center">
 
-📚 Certifications
-Full Stack Generative & Agentic AI with Python — Udemy
-RAG pipelines with LangChain and vector databases
-Stateful multi-node agents using LangGraph
-Machine Learning A–Z — Udemy
-Regression
-Classification
-Clustering
-NLP pipelines using Scikit-learn
-C++ DSA — Abdul Bari, Udemy
-Graph algorithms
-Dynamic programming
-Trees
-Time and space complexity analysis
-📈 GitHub Stats
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=aaradhya177&show_icons=true&hide_border=true&count_private=true" height="170"/> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aaradhya177&layout=compact&hide_border=true" height="170"/> </p>
-🔥 Contribution Streak
-<p align="center"> <img src="https://streak-stats.demolab.com?user=aaradhya177&hide_border=true" /> </p>
-📫 Let's Connect
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=aaradhya177&show_icons=true&hide_border=true&count_private=true&rank_icon=github" />
 
-I'm open to:
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aaradhya177&layout=compact&hide_border=true" />
 
-AI/ML internships
-Software engineering internships
-AI engineering collaborations
-Hackathons
-Open-source projects
-Technical discussions around AI systems and backend engineering
-<p align="center"> <a href="https://www.linkedin.com/in/aaradhya-mehra-07a46537b/"> <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/> </a> <a href="https://github.com/aaradhya177"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/> </a> <a href="mailto:aaradhyamehra240@gmail.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/> </a> <a href="https://codeforces.com/profile/YoullNeverCodeAlone17"> <img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white"/> </a> </p>
-<p align="center">
+</div>
 
-<i>Building AI systems that are useful, measurable, and reliable.</i>
+---
 
-</p> ```
+# 🔥 Contribution Streak
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=aaradhya177&hide_border=true" />
+
+</div>
+
+---
+
+# 📫 Let's Connect
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/aaradhya-mehra-07a46537b/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://github.com/aaradhya177">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="mailto:aaradhyamehra240@gmail.com">
+<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<a href="https://codeforces.com/profile/YoullNeverCodeAlone17">
+<img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white"/>
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+### 🚀 Building AI systems that are useful, measurable, and reliable.
+
+</div>
+```
